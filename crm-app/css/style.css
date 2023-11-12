@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +8,7 @@
 body {
     min-width: 320px;
     background-color: var(--background-body);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -17,8 +21,9 @@ body {
     --black: #333;
     --primary: #9873FF;
     --primary-light: #B89EFF;
-    --primary-gray: #8052FF;
+    --primary-bold: #8052FF;
     --background-body: #F5F5F5;
+    --gray: rgba(200, 197, 209, 0.5);
     --text-gray: #B0B0B0;
     --ligth-color: #FFF;
 }
@@ -52,21 +57,98 @@ body {
     flex-direction: column;
 }
 
-.clients__title {}
+.clients__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+}
 
-.clients__table {}
+.clients__table {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+}
 
-.table-head {}
+.table__heading {
+    vertical-align: middle;
+    padding: 0px 8px 8px 0;
+    color: var(--text-gray);
+    font-size: 12px;
+    line-height: 16px;
+}
 
-.table-row {}
+[data-name=id] {
+    width: 90px;
+}
 
-.table__heading {}
+[data-name=name] {
+    width: 233px;
+}
+
+[data-name=create] {
+    width: 158px;
+}
+
+[data-name=last-update] {
+    width: 146px;
+}
+
+[data-name=contacts] {
+    width: 150px;
+}
+
+[data-name=utils] {
+    width: 207px;
+}
 
 .table-body {
+    display: block;
     height: 300px;
-    background-color: black;
+    overflow-y: auto;
+    font-size: 14px;
+    background-color: var(--ligth-color);
+}
+
+.table-body::-webkit-scrollbar {
+    width: 0;
+}
+
+.table-body tr {
+    border-bottom: 1px solid var(--gray);
+}
+
+
+.table-body [data-name] {
+    line-height: 19px;
+    padding: 20px 0;
+}
+
+.table-body [data-name=id] {
+    line-height: 16px;
+    font-size: 12px;
+    color: var(--text-gray);
+}
+
+.clients__table [data-name=id] {
+    padding-left: 20px;
+}
+
+.table__heading[data-name=id] {
+    color: var(--primary);
 }
 
 .add-btn {
+    padding: 12.5px 26.5px;
+    font-size: 14px;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-weight: 600;
+    line-height: 19px;
     align-self: center;
+}
+
+.add-btn span {
+    padding-left: 32px;
 }
